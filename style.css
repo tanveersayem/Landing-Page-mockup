@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: grid;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+    grid-gap: 10px;
+    grid-template-areas: "nav nav"
+                         "header header"
+                         "covid19 covid19"
+                         "left right"
+                         "footer footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 75px 500px 500px 400px 75px;
+}
+
+
+
+h1, h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 17%;
+}
+
+header {
+    /*background-color: rgb(172, 173, 173);*/
+    grid-area: header;
+    background-image: url(./image/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    background-attachment: fixed;
+    
+}
+
+.covid19 {
+    grid-area: covid19;
+    text-align: center;
+    width: 60%;
+    justify-self: center;
+}
+
+p {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+nav {
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    /*border-bottom: .5px rgb(53, 53, 53) solid;*/
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(88, 88, 88);
+}
+
+
+.left {
+    background-color: rgb(254, 255, 255);
+    grid-area: left;
+    text-align: start;
+}
+
+.right {
+    /*background-color: bisque;*/
+    grid-area: right;
+    background-image: url(./image/right.jpg);
+    background-size: cover;
+}
+
+footer {
+    background-color: rgb(253, 253, 253);
+    grid-area: footer;
+}
+
+.left a {
+    color: rgb(86, 86, 87);
+    margin-left: 05px;
+    font-size: 20px;
+}
+
+.left a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    list-style: none;
+}
+
+.logo {
+    pointer-events: none;
+}
